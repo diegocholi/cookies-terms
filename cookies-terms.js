@@ -1,4 +1,8 @@
 "use strict";
+let path_script = document.currentScript
+  .getAttribute("src")
+  .split("cookies-terms.js")[0];
+
 document.head.innerHTML =
   '<link rel="preconnect" href="https://fonts.gstatic.com">' +
   '<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">';
@@ -21,19 +25,34 @@ const import_script = (scripts = []) => {
     document.head.appendChild(imported);
   }
 };
+const import_links = (links = []) => {
+  for (let index = 0; index < links.length; index++) {
+    const element = links[index];
+    let imported = document.createElement("link");
+    imported.href = element;
+    imported.rel = "stylesheet";
+    document.head.appendChild(imported);
+  }
+};
+
+let links = [
+  path_script + "/src/style/sc_modal.css",
+  path_script + "/src/style/sc_styles.css",
+];
+import_links(links);
 
 const initial_scripts = [
-  "/configuration.js",
-  "/src/js/sc_utils.js",
-  "/src/js/sc_block_scripts.js",
-  "/src/js/sc_blocked_cookies.js",
+  path_script + "/configuration.js",
+  path_script + "/src/js/sc_utils.js",
+  path_script + "/src/js/sc_block_scripts.js",
+  path_script + "/src/js/sc_blocked_cookies.js",
 ];
 import_script(initial_scripts);
 
 const views_scripts = [
-  "/src/js/sc_acc_terms.js",
-  "/src/js/sc_modal.js",
-  "/src/js/sc_cookies_rules.js",
+  path_script + "/src/js/sc_acc_terms.js",
+  path_script + "/src/js/sc_modal.js",
+  path_script + "/src/js/sc_cookies_rules.js",
 ];
 
 const set_cookies_description = (cookies, id_div) => {
@@ -122,5 +141,5 @@ const setHtml = (url) => {
   };
 };
 
-setHtml("src/views/sc_acc_terms.html");
-setHtml("src/views/modal.html");
+setHtml(path_script + "src/views/sc_acc_terms.html");
+setHtml(path_script + "src/views/modal.html");
