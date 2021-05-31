@@ -46,13 +46,13 @@ const initial_scripts = [
   path_script + "/src/js/sc_utils.js",
   path_script + "/src/js/sc_block_scripts.js",
   path_script + "/src/js/sc_blocked_cookies.js",
-  path_script + "/src/js/sc_cookies_rules.js",
 ];
 import_script(initial_scripts);
 
 const views_scripts = [
   path_script + "/src/js/sc_acc_terms.js",
   path_script + "/src/js/sc_modal.js",
+  path_script + "/src/js/sc_cookies_rules.js",
 ];
 
 const set_cookies_description = (cookies, id_div) => {
