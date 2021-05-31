@@ -116,14 +116,14 @@ const setHtml = (url) => {
   xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
       bodyCookieTerms.innerHTML += xhr.responseText;
-      if (url === "src/views/sc_acc_terms.html") {
+      if (url === path_script + "src/views/sc_acc_terms.html") {
         import_script(views_scripts);
         document.getElementById("sc_privacy_policy_link").href =
           configurations.privacy_policy_link;
         document.getElementById("sc_cookies_policy").href =
           configurations.cookies_policy;
       }
-      if (url === "src/views/modal.html") {
+      if (url === path_script + "src/views/modal.html") {
         set_cookies_description(
           configurations.Essencial,
           "sc_cookies_content_essentials"
