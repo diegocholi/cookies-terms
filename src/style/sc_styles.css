@@ -1,0 +1,82 @@
+.sc_container a {
+  color: rgb(255, 255, 255) !important;
+  text-decoration: underline !important;
+  opacity: 0.8;
+}
+.sc_container {
+  position: fixed;
+  padding: 10px 8px;
+  background-color: rgb(35, 122, 252);
+  color: #fff !important;
+  bottom: 0;
+  width: 100%;
+  z-index: 9900; /* número máximo é 9999 */
+}
+.sc_text_content {
+  text-align: justify;
+}
+.sc_acc_btn_div {
+  display: flex;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: rgb(35, 122, 252);
+  border-color: transparent;
+  font-weight: bold;
+  font-size: 10px;
+}
+.sc_open_modal_preferred_cookies_div {
+  display: flex;
+  height: 30px;
+  margin-top: 10px;
+  margin-right: 10px;
+  text-decoration: underline;
+}
+#sc_acc_btn {
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  color: rgb(35, 122, 252);
+  font-weight: bold;
+}
+.sc_open_modal_preferred_cookies {
+  cursor: pointer;
+  border-color: transparent;
+  background-color: transparent;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.sc_div_buttons_acc_terms {
+  display: flex;
+  flex: 1;
+  margin-right: 20px;
+}
+
+.sc_acc_btn_essentials_div {
+  display: flex;
+  height: 30px;
+  margin-top: 10px;
+}
+.sc_acc_btn_essentials {
+  cursor: pointer;
+  border-color: transparent;
+  background-color: transparent;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .sc_container {
+    display: flex;
+    flex: 1;
+  }
+  .sc_text_content {
+    width: 63%;
+    font-size: 12px;
+  }
+}

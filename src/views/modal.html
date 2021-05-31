@@ -1,0 +1,165 @@
+<div class="sc_background_modal" style="display: none">
+  <button class="sc_modal_exit" onclick="sc_open_modal(false)">X</button>
+
+  <div class="sc_modal_container">
+    <div class="sc_header_modal">
+      <h3 class="sc_h3_modal">Suas Preferências de Cookie</h3>
+      <p class="sc_p_header">
+        Usamos diferentes tipos de cookies para otimizar sua experiência em
+        nosso site. Clique nas categorias abaixo para saber mais sobre sua
+        consciência. Você pode escolher quais tipos de cookies permitir e pode
+        alterar suas preferências em qualquer momento. Lembre-se de que
+        desativar cookies pode afetar sua experiência no site. Você pode saber
+        mais sobre como obter cookies visitando nossa Política de Privacidade.
+      </p>
+      <button class="sc_save_editions_button" onclick="sc_save_changes()">
+        Salvar alterações
+      </button>
+    </div>
+    <hr color="#fff" />
+    <div class="sc_modal_body">
+      <div class="sc_modal_menu_desktop">
+        <ul>
+          <li>
+            <button
+              onclick="sc_modal_menu_navigation(0)"
+              class="sc_modal_menu_desktop_button"
+              style="background-color: #fff"
+            >
+              <label
+                class="sc_modal_menu_desktop_button_check"
+                style="display: contents"
+              >
+                <svg
+                  id="sc_icon_checked"
+                  class="sc_icon_checked"
+                  viewBox="0 0 36 36"
+                >
+                  <path
+                    d="M34.459 1.375c-1.391-.902-3.248-.506-4.149.884L13.5 28.17l-8.198-7.58c-1.217-1.125-3.114-1.051-4.239.166-1.125 1.216-1.051 3.115.166 4.239l10.764 9.952s.309.266.452.359c.504.328 1.07.484 1.63.484.982 0 1.945-.482 2.52-1.368L35.343 5.524c.902-1.39.506-3.248-.884-4.149z"
+                  />
+                </svg>
+              </label>
+              Essencial
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="sc_modal_menu_navigation(1)"
+              class="sc_modal_menu_desktop_button"
+            >
+              <label
+                class="sc_modal_menu_desktop_button_check"
+                style="display: contents"
+              >
+                <svg class="sc_icon_checked" viewBox="0 0 36 36">
+                  <path
+                    d="M34.459 1.375c-1.391-.902-3.248-.506-4.149.884L13.5 28.17l-8.198-7.58c-1.217-1.125-3.114-1.051-4.239.166-1.125 1.216-1.051 3.115.166 4.239l10.764 9.952s.309.266.452.359c.504.328 1.07.484 1.63.484.982 0 1.945-.482 2.52-1.368L35.343 5.524c.902-1.39.506-3.248-.884-4.149z"
+                  />
+                </svg>
+              </label>
+              Desempenho
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="sc_modal_menu_navigation(2)"
+              class="sc_modal_menu_desktop_button"
+            >
+              <label
+                class="sc_modal_menu_desktop_button_check"
+                style="display: none"
+              >
+                <svg class="sc_icon_checked" viewBox="0 0 36 36">
+                  <path
+                    d="M34.459 1.375c-1.391-.902-3.248-.506-4.149.884L13.5 28.17l-8.198-7.58c-1.217-1.125-3.114-1.051-4.239.166-1.125 1.216-1.051 3.115.166 4.239l10.764 9.952s.309.266.452.359c.504.328 1.07.484 1.63.484.982 0 1.945-.482 2.52-1.368L35.343 5.524c.902-1.39.506-3.248-.884-4.149z"
+                  />
+                </svg>
+              </label>
+              Publicidade
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="sc_modal_menu_mobile">
+        <select
+          name="select"
+          class="sc_modal_menu_select"
+          onchange="sc_modal_menu_navigation()"
+        >
+          <option value="0" selected>Essencial</option>
+          <option value="1">Desempenho</option>
+          <option value="2">Publicidade</option>
+        </select>
+      </div>
+      <div class="sc_modal_container_body">
+        <div class="sc_modal_content" style="display: block">
+          <label class="title_body_content"> Essencial </label>
+          <span class="sc_label_sempre_ativo">Sempre ativo</span>
+          <label class="switch">
+            <input type="checkbox" checked disabled />
+            <span class="sc_slider round"></span>
+          </label>
+          <p class="sc_p_description_type_cookie">
+            Estes cookies são essenciais para suportar a funcionalidade
+            principal do site, como fornecer log-in seguro.
+          </p>
+          <div class="sc_provedores_cookies">
+            Provedores Cookie de primeira parte
+          </div>
+          <div
+            id="sc_cookies_content_essentials"
+            class="sc_cookies_content"
+          ></div>
+        </div>
+        <div class="sc_modal_content" style="display: none">
+          <label class="title_body_content"> Desempenho </label>
+          <span class="sc_label_sempre_ativo">Sempre ativo</span>
+          <label class="switch">
+            <input type="checkbox" checked disabled />
+            <span class="sc_slider round"></span>
+          </label>
+          <p class="sc_p_description_type_cookie">
+            Esses cookies analisam o uso para otimização do site. Coletamos
+            informações de forma anônima que permitem determinar informações
+            suficientes para realizar análises de navegação, como por exemplo, o
+            número de visitantes de uma página, como o USUÁRIO chegou ao site e
+            as páginas acessadas.
+          </p>
+          <div class="sc_provedores_cookies">
+            Provedores Cookie de primeira parte
+          </div>
+          <div
+            id="sc_cookies_content_performance"
+            class="sc_cookies_content"
+          ></div>
+        </div>
+        <div class="sc_modal_content" style="display: none">
+          <label class="title_body_content"> Publicidade </label>
+          <label class="switch">
+            <input type="checkbox" onclick="sc_checked_acc_cookies(this)" />
+            <span class="sc_slider round"></span>
+          </label>
+          <div class="sc_aviso_anuncios">
+            <fieldset>
+              Não poderemos fornecer-lhe ofertas ou anúncios baseados em
+              interesses.
+            </fieldset>
+          </div>
+          <p class="sc_p_description_type_cookie">
+            Esses cookies ajudam a veicular conteúdo publicitário que é
+            relevante para você.
+          </p>
+          <div class="sc_provedores_cookies">
+            Provedores Cookie de primeira parte
+          </div>
+          <div
+            id="sc_cookies_content_advertising"
+            class="sc_cookies_content"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<link rel="stylesheet" href="/src/style/sc_modal.css" />
