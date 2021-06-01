@@ -25,6 +25,8 @@ const import_script = (scripts = []) => {
     document.head.appendChild(imported);
   }
 };
+import_script([path_script + "/configuration.js"]); // Importar primeiro as configurações
+
 const import_links = (links = []) => {
   for (let index = 0; index < links.length; index++) {
     let element = links[index];
@@ -42,7 +44,6 @@ const links = [
 import_links(links);
 
 const initial_scripts = [
-  path_script + "/configuration.js",
   path_script + "/src/js/sc_utils.js",
   path_script + "/src/js/sc_block_scripts.js",
   path_script + "/src/js/sc_blocked_cookies.js",
