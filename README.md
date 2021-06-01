@@ -8,6 +8,6 @@ Depois configurar o arquivo na raiz da solução "configuration.js". Nesse arqui
 
 Seguir o padão do objeto para evitar quebras na solução.
 
-Após definir as configuração, basta adicionar o script no body, antes de qualquer outra importações de sua aplicação, exemplo:
+Após definir as configuração, basta adicionar o script no body, antes de qualquer outro script de sua aplicação, exemplo:
 
     <script src="/cookies-terms/cookies-terms.js"></script>
