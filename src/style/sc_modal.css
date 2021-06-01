@@ -118,6 +118,7 @@
   margin-top: 10px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .hr_cookies_content {

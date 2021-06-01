@@ -19,7 +19,7 @@ document.body.innerHTML =
 
 const import_script = (scripts = []) => {
   for (let index = 0; index < scripts.length; index++) {
-    const element = scripts[index];
+    let element = scripts[index];
     let imported = document.createElement("script");
     imported.src = element;
     document.head.appendChild(imported);
@@ -27,7 +27,7 @@ const import_script = (scripts = []) => {
 };
 const import_links = (links = []) => {
   for (let index = 0; index < links.length; index++) {
-    const element = links[index];
+    let element = links[index];
     let imported = document.createElement("link");
     imported.href = element;
     imported.rel = "stylesheet";
@@ -35,7 +35,7 @@ const import_links = (links = []) => {
   }
 };
 
-let links = [
+const links = [
   path_script + "/src/style/sc_modal.css",
   path_script + "/src/style/sc_styles.css",
 ];
@@ -58,7 +58,7 @@ const views_scripts = [
 const set_cookies_description = (cookies, id_div) => {
   let cookies_content_essentials = document.getElementById(id_div);
   for (let index = 0; index < cookies.length; index++) {
-    const element = cookies[index];
+    let element = cookies[index];
     let id_open_detail = index;
     if (id_div === "sc_cookies_content_performance")
       id_open_detail += configurations.Essencial.length;
