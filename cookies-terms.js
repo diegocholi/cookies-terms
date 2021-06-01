@@ -21,6 +21,7 @@ const import_script = (scripts = []) => {
   for (let index = 0; index < scripts.length; index++) {
     let element = scripts[index];
     let imported = document.createElement("script");
+    imported.async = true;
     imported.src = element;
     document.head.appendChild(imported);
   }
