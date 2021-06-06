@@ -3,18 +3,18 @@ let path_script = document.currentScript
   .getAttribute("src")
   .split("cookies-terms.js")[0];
 
-document.head.innerHTML =
+document.head.innerHTML +=
   '<link rel="preconnect" href="https://fonts.gstatic.com">' +
   '<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">';
 
-document.head.innerHTML =
+document.head.innerHTML +=
   "<style type='text/css'>" +
   ".sc_cookies_font{" +
   "font-family: 'Roboto', sans-serif;" +
   "}" +
   "</style>";
 
-document.body.innerHTML =
+document.body.innerHTML +=
   '<div id="cookies-terms" class="sc_cookies_font"></div>';
 
 const import_script = (scripts = []) => {
